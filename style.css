@@ -150,4 +150,42 @@ header {
   width: 100%;
   padding: 20rem 0rem;
   background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.about-textbox {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.codegraphic {
+  border-radius: 0.8rem;
+  width: 25rem;
+}
+
+.about-hero {
+  font-size: 2rem;
+  color: rgb(173, 172, 172);
+  bottom: 4rem;
+}
+
+.about-par {
+  font-size: 22px;
+}
+
+.dutch {
+  background-image: linear-gradient(185deg, red, white, blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background 0.5s, transform 0.25s, opacity 0.25s;
 }
