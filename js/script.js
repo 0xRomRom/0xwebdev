@@ -88,7 +88,20 @@ const submitOverlay = document.querySelector(".submitoverlay");
 
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
+  emailInput.classList.remove("redborder");
+  messageInput.classList.remove("redborder");
+  if (emailInput.value === "") {
+    emailInput.classList.add("redborder");
+    if (messageInput.value === "") {
+      messageInput.classList.add("redborder");
+    }
+    return;
+  }
 
+  if (messageInput.value === "") {
+    messageInput.classList.add("redborder");
+    return;
+  }
   const params = {
     from: emailInput.value,
     subject: subjectInput.value,
