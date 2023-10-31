@@ -155,6 +155,7 @@ header {
   justify-content: center;
   align-items: flex-start;
   gap: 1.5rem;
+  overflow: hidden;
 }
 
 .about-textbox {
@@ -170,6 +171,7 @@ header {
 .codegraphic {
   border-radius: 0.8rem;
   width: 25rem;
+  z-index: 10;
 }
 
 .about-hero {
@@ -179,7 +181,7 @@ header {
 }
 
 .about-par {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .dutch {
@@ -188,4 +190,16 @@ header {
   -webkit-background-clip: text;
   color: transparent;
   transition: background 0.5s, transform 0.25s, opacity 0.25s;
+}
+
+.blob {
+  position: absolute;
+  top: 0rem;
+  left: 20rem;
+  width: 1200px;
+  height: 1200px;
+  background: radial-gradient(white, gray, black);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.2;
 }
