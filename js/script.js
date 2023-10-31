@@ -1,31 +1,35 @@
-const effectText = document.querySelector(".effectTxt");
-const textArray = [
-  "Dynamic",
-  "Scaleable",
-  "Responsive",
-  "Interactive",
-  "Efficient",
-  "Performant",
-];
+document.addEventListener("DOMContentLoaded", () => {
+  const effectText = document.querySelector(".effectTxt");
+  const textArray = [
+    "Dynamic",
+    "Scalable",
+    "Responsive",
+    "Interactive",
+    "Accessible",
+    "Performant",
+  ];
 
-const bgArray = [
-  "linear-gradient(90deg, rgb(41, 41, 241), rgb(68, 106, 211))",
-  "linear-gradient(90deg, rgb(128, 60, 173), rgb(68, 106, 211))",
-  "linear-gradient(90deg, rgb(30, 113, 190), rgb(30, 59, 114))",
-  "linear-gradient(90deg, rgb(223, 88, 25), rgb(185, 147, 42))",
-  "linear-gradient(90deg, rgb(24, 194, 33), rgb(37, 156, 101))",
-  "linear-gradient(90deg, rgb(82, 144, 238), rgb(37, 156, 101)))",
-];
+  const bgArray = [
+    "linear-gradient(90deg, rgb(91, 204, 212), rgb(68, 106, 211))",
+    "linear-gradient(90deg,rgb(184, 187, 35), rgb(225, 45, 231))",
+    "linear-gradient(90deg,rgb(13, 173, 236),rgb(135, 202, 199))",
+    "linear-gradient(90deg, rgb(223, 88, 25), rgb(185, 147, 42))",
+    "linear-gradient(90deg, rgb(24, 194, 33), rgb(37, 156, 101))",
+    "linear-gradient(90deg, rgb(228, 207, 26), rgb(219, 94, 36))",
+  ];
 
-let count = 0;
-setInterval(() => {
-  setTimeout(() => {
+  let count = 0;
+
+  function updateText() {
     effectText.classList.remove("dropDown");
-  }, 2300);
-  const len = textArray.length;
-  effectText.innerHTML = textArray[count];
-  effectText.style.backgroundImage = bgArray[count];
-  effectText.classList.add("dropDown");
-  count++;
-  if (count === len) count = 0;
-}, 2500);
+    setTimeout(() => {
+      effectText.style.backgroundImage = bgArray[count];
+      effectText.textContent = textArray[count];
+      effectText.classList.add("dropDown");
+      count = (count + 1) % textArray.length;
+    }, 150);
+  }
+
+  updateText();
+  setInterval(updateText, 2500);
+});
