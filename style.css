@@ -331,25 +331,51 @@ header {
   width: 32rem;
 }
 
-.tech-marquee-box {
-  position: relative;
-  border: 1px solid red;
-  padding: 2rem 0rem;
+.marque-wrap {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  overflow: hidden;
+  gap: 1.5rem;
+}
+
+.tech-marquee-box {
+  display: inline-block;
+  white-space: nowrap;
+  display: flex;
+  gap: 1.5rem;
+  animation: marquee 24s infinite linear;
+}
+
+.marque-wrap:before,
+.marque-wrap:after {
+  position: absolute;
+  /* top: 0; */
+  width: 250px;
+  height: 14rem;
+  content: "";
+  z-index: 2;
+}
+
+.marque-wrap:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+}
+.marque-wrap:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
 }
 
 .tech-item {
+  height: 14rem;
   width: 10rem;
-  min-height: 10rem;
   position: relative;
   padding: 3rem 0rem;
   background-color: rgba(255, 255, 255, 0.171);
-  display: flex;
+  display: block;
   flex-direction: column;
   border-radius: 0.3rem;
+
+  user-select: none;
+  /* display: flex; */
 }
 
 .techlogo {
@@ -357,9 +383,21 @@ header {
   max-height: 100px;
   color: white;
   margin: 0 auto;
+  display: block;
 }
 
 .tech-title {
   color: white;
   text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
