@@ -41,20 +41,7 @@ nav {
   padding: 0.5rem 1.5rem;
   border-radius: 0.4rem;
   user-select: none;
-}
-
-.activeSpan {
   color: white;
-}
-
-.activeSpan:hover {
-  color: white;
-  background: transparent !important;
-}
-
-.navspan:hover {
-  color: white;
-  background: linear-gradient(60deg, blue, rgba(69, 81, 194, 0.05));
 }
 
 .navlogo {
@@ -69,10 +56,18 @@ header {
   width: 100%;
   height: 100vh;
   background-color: black;
-  background-image: url("./assets/GradientBG.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  animation: rotate 10s linear infinite;
+  background: conic-gradient(
+    from 90deg,
+    rgb(0, 0, 0) 0%,
+    rgba(102, 24, 24, 1) 50%,
+    rgba(255, 0, 0, 1) 100%
+  );
+
+  transition: all 0.3s;
 }
 
 #canvas {
@@ -81,13 +76,6 @@ header {
   z-index: 2;
   width: calc(100vw - 20px);
   background-color: black;
-}
-
-.about {
-  position: relative;
-  width: 100%;
-  padding: 3rem 0rem;
-  background-color: yellow;
 }
 
 .headerOverlay {
@@ -104,13 +92,9 @@ header {
 .headerModal {
   position: relative;
   height: 10rem;
-  /* background-color: blue; */
-  /* border: 1px solid blue; */
   color: white;
   padding: 0 3rem;
   border-radius: 0.8rem;
-  /* background-color: rgb(0, 0, 0); */
-  /* box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.267); */
   width: 55rem;
   overflow: hidden;
 }
@@ -124,7 +108,8 @@ header {
 .header-row {
   /* background-color: red; */
   display: flex;
-  gap: 0.7rem;
+  gap: 1rem;
+  padding-left: 2.2rem;
 }
 
 .effectTxt {
@@ -143,6 +128,7 @@ header {
   -webkit-background-clip: text;
   color: transparent;
   transition: background 0.5s, transform 0.25s, opacity 0.25s;
+  padding-left: 0.5rem;
 }
 
 .effectTxt.dropDown {
@@ -156,4 +142,12 @@ header {
   top: -1rem;
   left: 0.2rem;
   position: relative;
+  padding-left: 2.2rem;
+}
+
+.about {
+  position: relative;
+  width: 100%;
+  padding: 20rem 0rem;
+  background-color: black;
 }
