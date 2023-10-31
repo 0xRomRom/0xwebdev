@@ -114,6 +114,10 @@ header {
   padding-left: 2.2rem;
 }
 
+.activeSpan {
+  background-color: rgba(255, 255, 255, 0.308);
+}
+
 .effectTxt {
   font-size: 5rem;
   letter-spacing: 2px;
@@ -155,9 +159,9 @@ header {
   color: white;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  flex-direction: column;
   gap: 1.5rem;
-  overflow: hidden;
 }
 
 .about-textbox {
@@ -187,6 +191,16 @@ header {
   bottom: 4rem;
 }
 
+.solutions-hero {
+  font-size: 2rem;
+  color: rgb(214, 210, 210);
+  bottom: 4rem;
+  position: absolute;
+  z-index: 50;
+  top: 13rem;
+  left: 20rem;
+}
+
 .about-par {
   font-size: 20px;
 }
@@ -201,9 +215,10 @@ header {
   border-radius: 50%;
   filter: blur(80px);
   opacity: 0.2;
+  z-index: 30;
 }
 
-.to-about-cta {
+.mainCta {
   padding: 1rem 2rem;
   background-color: transparent;
   color: rgb(255, 255, 255);
@@ -214,9 +229,9 @@ header {
   transition: all 0.2s ease-in-out;
   position: relative;
   top: 7rem;
+  z-index: 50;
 }
-
-.to-about-cta:hover {
+.mainCta:hover {
   background-color: white;
   color: black;
   border: 2px solid white;
@@ -225,4 +240,126 @@ header {
 .cls {
   opacity: 0;
   transition: opacity 1.5s;
+}
+
+.wrap {
+  display: flex;
+  gap: 1rem;
+}
+
+.solutions {
+  position: relative;
+  width: 100%;
+  padding: 30rem 0rem;
+  padding-top: 8rem;
+  background-color: black;
+  margin-top: -5rem;
+  border-top: 1px solid white;
+}
+
+.cloudwrapper {
+  position: absolute;
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 4rem;
+}
+
+.cloudsvg {
+  width: 15rem;
+  position: absolute;
+  margin-top: 10rem;
+  z-index: 30;
+  filter: blur(1px);
+}
+
+.cloudsvg2 {
+  position: absolute;
+  width: 25rem;
+  margin-left: 5rem;
+  z-index: 20;
+  filter: blur(1px);
+}
+
+.cloudsvg3 {
+  position: absolute;
+  width: 17.5rem;
+  z-index: 40;
+  margin-left: 12rem;
+  margin-top: 8rem;
+  filter: blur(1px);
+}
+
+.hover1 {
+  animation: hover 8s ease-in-out infinite;
+}
+
+.hover2 {
+  animation: hover 12s ease-in-out infinite;
+}
+
+.hover3 {
+  animation: hover 15s ease-in-out infinite;
+}
+
+@keyframes hover {
+  0% {
+    transform: translateX(0rem);
+  }
+  50% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+.solutionsbox {
+  position: relative;
+  /* border: 1px solid red; */
+  padding: 5rem 0rem;
+  margin-top: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.solutions-par {
+  color: white;
+  font-size: 22px;
+  width: 32rem;
+}
+
+.tech-marquee-box {
+  position: relative;
+  border: 1px solid red;
+  padding: 2rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tech-item {
+  width: 10rem;
+  min-height: 10rem;
+  position: relative;
+  padding: 3rem 0rem;
+  background-color: rgba(255, 255, 255, 0.171);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.3rem;
+}
+
+.techlogo {
+  max-width: 100px;
+  max-height: 100px;
+  color: white;
+  margin: 0 auto;
+}
+
+.tech-title {
+  color: white;
+  text-align: center;
 }

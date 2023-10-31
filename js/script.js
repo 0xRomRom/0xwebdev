@@ -42,6 +42,13 @@ toAbout.addEventListener("click", () => {
   toAboutDiv.scrollIntoView({ behavior: "smooth" }); // Use "smooth" for smooth scrolling
 });
 
+const toSolutions = document.querySelector(".to-solutions-cta");
+const toSolutionsDiv = document.querySelector(".solutions");
+
+toSolutions.addEventListener("click", () => {
+  toSolutionsDiv.scrollIntoView({ behavior: "smooth" }); // Use "smooth" for smooth scrolling
+});
+
 //Intersection Observer
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
@@ -54,7 +61,6 @@ function isElementInViewport(el) {
   );
 }
 
-// Function to handle the fading effect
 function handleScroll() {
   const elements = document.querySelectorAll(".cls");
   elements.forEach((element) => {
@@ -66,8 +72,6 @@ function handleScroll() {
   });
 }
 
-// Add an event listener to check for changes in the viewport
 window.addEventListener("scroll", handleScroll);
 
-// Initial check on page load
 handleScroll();
