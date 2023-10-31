@@ -461,4 +461,74 @@ header {
     rgb(24, 24, 24),
     rgb(24, 24, 24)
   );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactModal {
+  width: 30rem;
+  height: 30rem;
+  border: 1px solid rgb(117, 117, 117);
+  border-radius: 0.4rem;
+  /* box-shadow: -2px 2px 15px gray; */
+  background: linear-gradient(to bottom right, rgb(41, 40, 40), rgb(65, 65, 65)41, 40, 40));
+}
+
+.contact-topbar {
+  padding: 0.4rem 0rem;
+  background-color: rgb(54, 54, 54);
+  border-top-right-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+}
+
+.newmsg-top {
+  position: relative;
+  color: rgb(190, 188, 188);
+  margin-left: 1rem;
+  font-size: 16px;
+  display: block;
+}
+
+.newmsg {
+  position: relative;
+  color: rgb(190, 188, 188);
+  margin-left: 1rem;
+  font-size: 16px;
+  display: block;
+  width: 2.5rem;
+}
+
+.webdev {
+  position: relative;
+  color: rgb(255, 255, 255);
+  margin-left: 0.7rem;
+  font-size: 16px;
+  display: block;
+}
+
+.contact-tobar {
+  padding: 0.4rem 0rem;
+  border-top-right-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  display: flex;
+}
+
+.sep-border {
+  position: relative;
+  border-bottom: 1px solid gray;
+  width: 95%;
+  left: 2.5%
+}
+
+.emailInput {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(185, 185, 185);
+  margin-left: 0.5rem;
+  color: white;
+  font-size: 16px;
+  width: 11rem;
+  padding-left: 0.25rem;
 }
