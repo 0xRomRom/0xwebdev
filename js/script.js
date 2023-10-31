@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       effectText.style.backgroundImage = textBgArray[count];
       effectText.textContent = textArray[count];
       effectText.classList.add("dropDown");
+
       count = (count + 1) % textArray.length;
     }, 150);
   }
