@@ -334,7 +334,6 @@ header {
 .marque-wrap {
   display: flex;
   overflow: hidden;
-  gap: 1.5rem;
 }
 
 .tech-marquee-box {
@@ -342,7 +341,9 @@ header {
   white-space: nowrap;
   display: flex;
   gap: 1.5rem;
-  animation: marquee 24s infinite linear;
+  animation: marquee 5s infinite linear;
+  /* margin-right: 1.5rem; */
+  padding: 0rem 0.75rem;
 }
 
 .marque-wrap:before,
