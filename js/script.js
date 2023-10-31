@@ -83,6 +83,8 @@ const submitButton = document.querySelector(".submitform");
 const emailInput = document.querySelector(".emailInput");
 const subjectInput = document.querySelector(".subject-select");
 const messageInput = document.querySelector(".messagebox");
+const app = document.querySelector(".app");
+const submitOverlay = document.querySelector(".submitoverlay");
 
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -92,24 +94,18 @@ submitButton.addEventListener("click", (e) => {
     subject: subjectInput.value,
     message: messageInput.value,
   };
-  emailjs.send("service_1i003xe", "template_dy5rw7e", params);
+  // emailjs.send("service_1i003xe", "template_dy5rw7e", params);
+  submitOverlay.classList.remove("hidden");
+  setTimeout(() => {
+    submitOverlay.classList.add("scaleUp");
+  }, 100);
+  setTimeout(() => {
+    app.scrollIntoView({ behavior: "smooth" }); // Use "smooth" for smooth scrolling
+  }, 3000);
+  setTimeout(() => {
+    submitOverlay.classList.add("scaleDown");
+  }, 5000);
+  setTimeout(() => {
+    submitOverlay.classList.add("hidden");
+  }, 7000);
 });
-
-// window.onload = function () {
-//   document
-//     .getElementById("contact-form")
-//     .addEventListener("submit", function (event) {
-//       event.preventDefault();
-//       // generate a five digit number for the contact_number variable
-//       this.contact_number.value = (Math.random() * 100000) | 0;
-//       // these IDs from the previous steps
-//       emailjs.sendForm("contact_service", "contact_form", this).then(
-//         function () {
-//           console.log("SUCCESS!");
-//         },
-//         function (error) {
-//           console.log("FAILED...", error);
-//         }
-//       );
-//     });
-// };
