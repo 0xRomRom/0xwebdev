@@ -7,6 +7,15 @@
     <script defer src="./js/script.js"></script>
     <script defer src="./js/canvas.js"></script>
     <link href="./style.css" rel="stylesheet" type="text/css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("b-hjzprAWXYl5YUat");
+      })();
+    </script>
   </head>
   <body>
     <div class="app">
@@ -301,7 +310,7 @@
         </div>
       </div>
       <div class="contact">
-        <div class="contactModal">
+        <form class="contactModal" id="contact-form">
           <div class="contact-topbar">
             <span class="newmsg-top">New Message</span>
           </div>
@@ -315,7 +324,26 @@
             <input type="text" class="emailInput" placeholder="Email Address" />
           </div>
           <div class="sep-border"></div>
-        </div>
+          <div class="contact-tobar">
+            <span class="newmsg">Subject</span>
+            <select class="subject-select">
+              <option value="Any">Any</option>
+              <option value="Quote">Get a quote for your project</option>
+              <option value="Quote">Enquire about possibilities</option>
+              <option value="Call">Arrange call</option>
+              <option value="Hi">Say Hi 👋</option>
+            </select>
+          </div>
+          <textarea class="messagebox"></textarea>
+          <button class="submitform">
+            Send message
+            <img
+              src="./assets/Envelope.svg"
+              alt="Envelope Image"
+              class="envelope"
+            />
+          </button>
+        </form>
       </div>
     </div>
   </body>

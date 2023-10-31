@@ -76,3 +76,40 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll);
 
 handleScroll();
+
+//Submit form
+
+const submitButton = document.querySelector(".submitform");
+const emailInput = document.querySelector(".emailInput");
+const subjectInput = document.querySelector(".subject-select");
+const messageInput = document.querySelector(".messagebox");
+
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const params = {
+    from: emailInput.value,
+    subject: subjectInput.value,
+    message: messageInput.value,
+  };
+  emailjs.send("service_1i003xe", "template_dy5rw7e", params);
+});
+
+// window.onload = function () {
+//   document
+//     .getElementById("contact-form")
+//     .addEventListener("submit", function (event) {
+//       event.preventDefault();
+//       // generate a five digit number for the contact_number variable
+//       this.contact_number.value = (Math.random() * 100000) | 0;
+//       // these IDs from the previous steps
+//       emailjs.sendForm("contact_service", "contact_form", this).then(
+//         function () {
+//           console.log("SUCCESS!");
+//         },
+//         function (error) {
+//           console.log("FAILED...", error);
+//         }
+//       );
+//     });
+// };
