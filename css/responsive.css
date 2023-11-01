@@ -10,15 +10,18 @@
     gap: 3rem;
     justify-content: center;
     align-items: center;
+    margin: 0 2rem;
+    padding: 0rem 1rem;
     /* max-width: 380px; */
   }
   .about-par {
     /* white-space: nowrap; */
-    line-break: auto;
+    /* line-break: auto; */
+    font-size: 18px;
   }
 
-  .about-par br {
-    /* display: none; */
+  .about-textbox {
+    padding: 0rem 1rem;
   }
 }
 
@@ -122,5 +125,39 @@
   }
   .subHeader {
     padding-left: 19rem;
+  }
+
+  .codegraphic {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-row {
+    flex-direction: column;
+    padding-left: 18rem;
+  }
+  .subHeader {
+    padding-left: 18rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-row {
+    flex-direction: column;
+    padding-left: 19rem;
+  }
+  .subHeader {
+    padding-left: 19rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-row {
+    flex-direction: column;
+    padding-left: 18rem;
+  }
+  .subHeader {
+    padding-left: 18rem;
   }
 }
