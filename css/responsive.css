@@ -74,9 +74,6 @@
 }
 
 @media (max-width: 750px) {
-  #canvas {
-    display: block;
-  }
   nav {
     padding-right: 2rem;
     background-color: rgba(27, 7, 7, 0.8);
@@ -87,6 +84,7 @@
     left: -100%;
     display: none;
     font-size: 20px;
+    background: linear-gradient(90deg, black, rgb(31, 30, 30));
   }
 
   .hamburger {
@@ -237,6 +235,9 @@
   }
   .solutions {
     padding-bottom: 15rem;
+  }
+  .about {
+    /* padding-bottom: 20rem; */
   }
 }
 @media (max-width: 440px) {

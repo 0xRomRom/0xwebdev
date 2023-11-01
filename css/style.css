@@ -91,17 +91,6 @@ header {
   transition: all 0.3s;
 }
 
-#canvas {
-  position: absolute;
-  z-index: 2;
-  width: 87%;
-  left: 1%;
-  height: 100%;
-  background-color: black;
-  display: none;
-  padding: 0.5rem 0rem 0.5rem 0.5rem;
-}
-
 .headerOverlay {
   position: absolute;
   z-index: 10;
@@ -186,7 +175,7 @@ header {
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .about-textbox {
@@ -263,7 +252,7 @@ header {
 
 .cls {
   opacity: 0;
-  transition: opacity 1.5s;
+  transition: opacity 2s;
 }
 
 .wrap {
