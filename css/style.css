@@ -263,7 +263,7 @@ header {
 
 .cls {
   opacity: 1;
-  transition: opacity 1.5s;
+  /* transition: opacity 1.5s; */
 }
 
 .wrap {
