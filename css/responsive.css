@@ -11,6 +11,8 @@
 @media (max-width: 750px) {
   nav {
     padding-right: 2rem;
+    background-color: rgba(27, 7, 7, 0.8);
+    z-index: 500;
   }
   .nav-rightblock {
     flex-direction: column;
@@ -21,5 +23,17 @@
 
   .hamburger {
     display: flex;
+  }
+  .effectHeader {
+    font-size: 4rem;
+  }
+  .effectTxt {
+    font-size: 4rem;
+  }
+  .headerModal {
+    margin-top: 11.9rem;
+  }
+  .header-row {
+    padding-left: 6rem;
   }
 }

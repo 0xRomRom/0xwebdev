@@ -155,7 +155,6 @@ homespan.addEventListener("click", () => {
     span.classList.remove("activeSpan");
   });
   hamburger.classList.add("menuActive");
-  navBar.style.display = "none";
   navBar.classList.remove("menuActives");
   homespan.classList.add("activeSpan");
   app.scrollIntoView({ behavior: "smooth" });
@@ -166,7 +165,6 @@ aboutspan.addEventListener("click", () => {
     span.classList.remove("activeSpan");
   });
   hamburger.classList.add("menuActive");
-  navBar.style.display = "none";
   navBar.classList.remove("menuActives");
   aboutspan.classList.add("activeSpan");
   toAboutDiv.scrollIntoView({ behavior: "smooth" });
@@ -177,7 +175,6 @@ solutionsspan.addEventListener("click", () => {
     span.classList.remove("activeSpan");
   });
   hamburger.classList.add("menuActive");
-  navBar.style.display = "none";
   navBar.classList.remove("menuActives");
   solutionsspan.classList.add("activeSpan");
   toSolutionsDiv.scrollIntoView({ behavior: "smooth" });
@@ -188,7 +185,6 @@ contactspan.addEventListener("click", () => {
     span.classList.remove("activeSpan");
   });
   hamburger.classList.add("menuActive");
-  navBar.style.display = "none";
   navBar.classList.remove("menuActives");
   contactspan.classList.add("activeSpan");
   toContactDiv.scrollIntoView({ behavior: "smooth" });
