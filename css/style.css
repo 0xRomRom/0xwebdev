@@ -173,7 +173,7 @@ header {
 .about {
   position: relative;
   width: 100%;
-  padding: 22rem 0rem;
+  padding: 18rem 0rem;
   background-color: black;
   color: white;
   display: flex;
@@ -279,7 +279,6 @@ header {
     rgb(24, 24, 24),
     rgb(24, 24, 24)
   );
-  margin-top: -5rem;
 }
 
 .cloudwrapper {
@@ -353,7 +352,6 @@ header {
 .solutions-par {
   color: white;
   font-size: 22px;
-  width: 32rem;
 }
 
 .marque-wrap {
@@ -438,7 +436,6 @@ header {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   position: relative;
-  top: 7rem;
   z-index: 50;
 }
 .to-solutions-cta:hover {

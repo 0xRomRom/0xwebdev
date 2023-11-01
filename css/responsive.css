@@ -1,3 +1,18 @@
+@media (max-width: 1500px) {
+  .solutionsbox {
+    justify-content: flex-end;
+    padding-right: 3rem;
+  }
+}
+@media (max-width: 1100px) {
+  .cloudwrapper {
+    padding: 0;
+  }
+
+  .solutions-hero {
+    left: 18rem;
+  }
+}
 @media (max-width: 1000px) {
   nav {
     padding-right: 2rem;
@@ -9,25 +24,24 @@
     flex-direction: column-reverse;
     gap: 3rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 2rem;
     padding: 0rem 1rem;
-    /* max-width: 380px; */
   }
   .about-par {
-    /* white-space: nowrap; */
-    /* line-break: auto; */
     font-size: 18px;
   }
-
-  .about-textbox {
-    padding: 0rem 1rem;
+  .solutions-par {
+    font-size: 18px;
   }
 }
 
 @media (max-width: 751px) {
   .hamburger {
     display: none;
+  }
+  .solutions {
+    padding-top: 4rem;
   }
 }
 
@@ -46,6 +60,16 @@
   }
   .subHeader {
     padding-left: 6rem;
+  }
+  .solutions-box {
+    text-align: right;
+    padding: 3rem 0rem;
+  }
+  .solutions-par {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-left: 1rem;
   }
 }
 @media (max-width: 750px) {
@@ -84,6 +108,19 @@
   }
   .header-row {
     gap: 0.5rem;
+  }
+  .contact-titlebox {
+    width: 20rem;
+    padding: 3rem 0rem;
+  }
+  .contact-hero {
+    left: 0;
+    margin-right: 5rem;
+    position: relative;
+    top: 0;
+  }
+  .slideIn {
+    transform: translateX(6rem);
   }
 }
 
@@ -129,6 +166,58 @@
 
   .codegraphic {
     width: 20rem;
+  }
+  .about {
+    padding-top: 10rem;
+  }
+
+  .solutions-hero {
+    left: 16rem;
+    top: 15rem;
+  }
+  .cloudsvg {
+    width: 12.5rem;
+    margin-top: 10rem;
+  }
+
+  .cloudsvg2 {
+    width: 22.5rem;
+    margin-left: 0rem;
+  }
+
+  .cloudsvg3 {
+    width: 15rem;
+    margin-left: 7rem;
+  }
+  .solutions-hero {
+    left: 12rem;
+  }
+
+  .solutionsbox {
+    padding: 5rem 1rem;
+    display: block;
+    display: flex;
+    justify-content: center;
+  }
+  .solutions-par {
+    padding-left: 0rem;
+    width: 20rem;
+  }
+
+  .solutions-par br {
+    display: none;
+  }
+
+  .marque-wrap:before,
+  .marque-wrap:after {
+    position: absolute;
+    width: 150px;
+    height: 14rem;
+    content: "";
+    z-index: 2;
+  }
+  .contact {
+    padding: 5rem 0rem;
   }
 }
 
