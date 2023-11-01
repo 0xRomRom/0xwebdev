@@ -69,8 +69,6 @@ function handleScroll() {
   elements.forEach((element) => {
     if (isElementInViewport(element)) {
       element.style.opacity = 1;
-    } else {
-      element.style.opacity = 0;
     }
   });
   slideelements.forEach((element) => {
