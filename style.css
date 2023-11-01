@@ -39,7 +39,7 @@ body {
 
 nav {
   position: relative;
-  z-index: 30;
+  z-index: 100;
   width: 100%;
   /* background-color: rgb(51, 44, 44); */
   display: flex;
@@ -87,6 +87,7 @@ header {
   );
 
   transition: all 0.3s;
+  /* z-index: 40; */
 }
 
 #canvas {
