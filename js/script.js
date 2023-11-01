@@ -65,19 +65,18 @@ function isElementInViewport(el) {
 
 function handleScroll() {
   const elements = document.querySelectorAll(".cls");
-  const slideelements = document.querySelectorAll(".cli");
+  const slideelements = document.querySelector(".cli");
   elements.forEach((element) => {
     if (isElementInViewport(element)) {
       element.style.opacity = 1;
     }
   });
-  slideelements.forEach((element) => {
-    if (isElementInViewport(element)) {
-      element.classList.add("slideIn");
-    } else {
-      element.classList.remove("slideIn");
-    }
-  });
+
+  if (isElementInViewport(slideelements)) {
+    slideelements.classList.add("slideIn");
+  } else {
+    slideelements.classList.remove("slideIn");
+  }
 }
 
 window.addEventListener("scroll", handleScroll);
@@ -195,6 +194,7 @@ const divs = Array.from(document.querySelectorAll(".container"));
 const navSpans = Array.from(document.querySelectorAll(".navspan"));
 
 window.onscroll = () => {
+  if (window.innerWidth < 749) return;
   divs.forEach((div) => {
     const top = window.scrollY;
     const offset = div.offsetTop - 200;
