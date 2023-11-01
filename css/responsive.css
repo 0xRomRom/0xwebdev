@@ -163,7 +163,7 @@
   .contactModal {
     position: relative;
     width: 95%;
-    left: 1%;
+    left: 2.5%;
   }
 }
 
@@ -180,7 +180,8 @@
     width: 20rem;
   }
   .about {
-    padding-top: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 15rem;
   }
 
   .solutions-hero {
@@ -233,6 +234,9 @@
     padding-top: 2rem;
     justify-content: flex-start;
     align-items: flex-start;
+  }
+  .solutions {
+    padding-bottom: 15rem;
   }
 }
 @media (max-width: 440px) {
