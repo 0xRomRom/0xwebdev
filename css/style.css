@@ -87,7 +87,6 @@ header {
   );
 
   transition: all 0.3s;
-  /* z-index: 40; */
 }
 
 #canvas {
