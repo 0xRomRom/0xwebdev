@@ -64,11 +64,19 @@ function isElementInViewport(el) {
 
 function handleScroll() {
   const elements = document.querySelectorAll(".cls");
+  const slideelements = document.querySelectorAll(".cli");
   elements.forEach((element) => {
     if (isElementInViewport(element)) {
       element.style.opacity = 1;
     } else {
       element.style.opacity = 0;
+    }
+  });
+  slideelements.forEach((element) => {
+    if (isElementInViewport(element)) {
+      element.classList.add("slideIn");
+    } else {
+      element.classList.remove("slideIn");
     }
   });
 }
@@ -85,12 +93,13 @@ const subjectInput = document.querySelector(".subject-select");
 const messageInput = document.querySelector(".messagebox");
 const app = document.querySelector(".app");
 const submitOverlay = document.querySelector(".submitoverlay");
+const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
 
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
   emailInput.classList.remove("redborder");
   messageInput.classList.remove("redborder");
-  if (emailInput.value === "") {
+  if (emailInput.value === "" || !emailRegex.test(emailInput.value)) {
     emailInput.classList.add("redborder");
     if (messageInput.value === "") {
       messageInput.classList.add("redborder");
@@ -120,5 +129,10 @@ submitButton.addEventListener("click", (e) => {
   }, 5000);
   setTimeout(() => {
     submitOverlay.classList.add("hidden");
+    submitOverlay.classList.remove("scaleUp");
+    submitOverlay.classList.remove("scaleDown");
+    emailInput.value = "";
+    messageInput.value = "";
+    subjectInput.selectedIndex = 0;
   }, 7000);
 });

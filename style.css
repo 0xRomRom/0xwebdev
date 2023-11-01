@@ -450,7 +450,8 @@ header {
 
 .contact {
   position: relative;
-  padding: 25rem 0rem;
+  padding: 15rem 0rem;
+  padding-bottom: 5rem;
   background-color: black;
   background: linear-gradient(
     50deg,
@@ -465,6 +466,7 @@ header {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .contactModal {
@@ -624,4 +626,36 @@ header {
 
 .redborder {
   border: 2px solid red;
+}
+
+.contact-titlebox {
+  position: relative;
+  padding: 5rem 0rem;
+  width: 100%;
+  /* background: linear-gradient(
+    90deg,
+    white,
+    rgb(24, 24, 24),
+    rgb(24, 24, 24),
+    rgb(24, 24, 24),
+    rgb(24, 24, 24)
+  ); */
+  margin-bottom: 10rem;
+}
+
+.contact-hero {
+  left: 1rem;
+  display: block;
+  color: rgb(161, 160, 160);
+  top: 2rem;
+  position: absolute;
+  font-size: 4rem;
+  transform: translateX(-0rem);
+  opacity: 0;
+}
+
+.slideIn {
+  transform: translateX(10rem);
+  transition: all 2s ease-in-out;
+  opacity: 1;
 }
