@@ -160,6 +160,7 @@
   .contact {
     align-items: flex-start;
     padding: 0rem 1rem;
+    padding-bottom: 2rem;
   }
   .contactModal {
     position: relative;

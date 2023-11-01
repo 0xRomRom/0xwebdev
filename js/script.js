@@ -186,3 +186,24 @@ hamburger.addEventListener("click", () => {
     span.classList.remove("activeSpan");
   });
 });
+
+const elementsToAnimate = document.querySelectorAll(".cls");
+
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+};
+
+elementsToAnimate.forEach((elementToAnimate) => {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  observer.observe(elementToAnimate);
+});
