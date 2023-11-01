@@ -146,12 +146,17 @@ navBarLogo.addEventListener("click", () => {
 
 //Click navlinks
 const navspans = document.querySelectorAll(".navspan");
+const hamburger = document.querySelector(".hamburger");
+const navBar = document.querySelector(".nav-rightblock");
 
 const homespan = document.querySelector(".ct1");
 homespan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
+  navBar.classList.add("hidden");
+  hamburger.classList.remove("menuActive");
+  navBar.classList.remove("menuActives");
   homespan.classList.add("activeSpan");
   app.scrollIntoView({ behavior: "smooth" });
 });
@@ -160,6 +165,9 @@ aboutspan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
+  navBar.classList.add("hidden");
+  hamburger.classList.remove("menuActive");
+  navBar.classList.remove("menuActives");
   aboutspan.classList.add("activeSpan");
   toAboutDiv.scrollIntoView({ behavior: "smooth" });
 });
@@ -168,6 +176,9 @@ solutionsspan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
+  navBar.classList.add("hidden");
+  hamburger.classList.remove("menuActive");
+  navBar.classList.remove("menuActives");
   solutionsspan.classList.add("activeSpan");
   toSolutionsDiv.scrollIntoView({ behavior: "smooth" });
 });
@@ -176,16 +187,17 @@ contactspan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
+  navBar.classList.add("hidden");
+  hamburger.classList.remove("menuActive");
+  navBar.classList.remove("menuActives");
   contactspan.classList.add("activeSpan");
   toContactDiv.scrollIntoView({ behavior: "smooth" });
 });
 
 //Scroll toggle nav
 
-// Array of div elements
 const divs = Array.from(document.querySelectorAll(".container"));
 
-// Array of corresponding navigation spans
 const navSpans = Array.from(document.querySelectorAll(".navspan"));
 console.log(navSpans);
 
@@ -206,8 +218,19 @@ window.onscroll = () => {
 };
 
 //Hamburger
-
-const hamburger = document.querySelector(".hamburger");
+const navActive = false;
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("menuActive");
+  navBar.classList.toggle("menuActives");
+  navBar.classList.toggle("hidden");
+  navspans.forEach((span) => {
+    span.classList.remove("activeSpan");
+  });
+  if (!navActive) {
+    navBar.style.display = "flex";
+    return;
+  } else {
+    navActive = !navActive;
+    navBar.style.display = "none";
+  }
 });

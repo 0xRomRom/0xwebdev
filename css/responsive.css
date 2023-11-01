@@ -1,0 +1,17 @@
+@media (max-width: 1000px) {
+  nav {
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 750px) {
+  nav {
+    padding-right: 2rem;
+  }
+  .nav-rightblock {
+    /* display: none; */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

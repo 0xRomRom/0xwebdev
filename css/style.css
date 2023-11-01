@@ -674,13 +674,13 @@ header {
   width: 25px;
   height: 25px;
   color: white;
-  /* background-color: white; */
-  /* border: 1px solid white; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   cursor: pointer;
+  display: none;
+  z-index: 1000;
 }
 
 .hamburger.menuActive span:nth-child(1) {
@@ -705,7 +705,18 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
-.menuActive {
+.menuActives {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  height: 100vh;
+  background-color: black;
+  z-index: 1000;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
