@@ -653,8 +653,7 @@ header {
   top: 2rem;
   position: absolute;
   font-size: 4rem;
-  transform: translateX(-0rem);
-  opacity: 0;
+  transform: translateX(10rem);
 }
 
 .slideIn {

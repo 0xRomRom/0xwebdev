@@ -118,8 +118,7 @@
     padding: 3rem 0rem;
   }
   .contact-hero {
-    left: 0;
-    margin-right: 5rem;
+    left: -4.2rem;
     position: relative;
     top: 0;
   }
@@ -163,7 +162,7 @@
   .contactModal {
     position: relative;
     width: 95%;
-    left: 2.5%;
+    left: 1.8%;
   }
 }
 
@@ -245,9 +244,10 @@
     padding: 3rem 0rem;
   }
   .contact-hero {
-    left: 0;
-    position: relative;
     font-size: 3rem;
+  }
+  .contactModal {
+    margin: 0 auto;
   }
 }
 
