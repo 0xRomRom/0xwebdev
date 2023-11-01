@@ -12,7 +12,6 @@
 
 ::-webkit-scrollbar-corner {
   background: transparent;
-  color: red;
 }
 
 * {
@@ -39,7 +38,7 @@ body {
 
 nav {
   position: relative;
-  z-index: 100;
+  z-index: 200;
   width: 100%;
   /* background-color: rgb(51, 44, 44); */
   display: flex;
@@ -197,7 +196,7 @@ header {
 .codegraphic {
   border-radius: 0.8rem;
   width: 25rem;
-  z-index: 10;
+  z-index: 50;
   transition: all 0.2s ease-in-out;
 }
 
@@ -451,8 +450,8 @@ header {
 
 .contact {
   position: relative;
-  padding: 15rem 0rem;
-  padding-bottom: 5rem;
+  padding: 10rem 0rem;
+  padding-bottom: 0rem;
   background-color: black;
   background: linear-gradient(
     50deg,
@@ -468,6 +467,7 @@ header {
   align-items: center;
   overflow: hidden;
   flex-direction: column;
+  padding-bottom: 5rem;
 }
 
 .contactModal {
@@ -632,16 +632,16 @@ header {
 .contact-titlebox {
   position: relative;
   padding: 5rem 0rem;
-  width: 100%;
-  /* background: linear-gradient(
+  width: 30rem;
+  background: linear-gradient(
     90deg,
-    white,
-    rgb(24, 24, 24),
-    rgb(24, 24, 24),
+    rgb(92, 90, 90),
+    rgb(92, 90, 90),
     rgb(24, 24, 24),
     rgb(24, 24, 24)
-  ); */
-  margin-bottom: 10rem;
+  );
+  margin-bottom: 5rem;
+  /* border: 1px solid white; */
 }
 
 .contact-hero {
@@ -659,4 +659,53 @@ header {
   transform: translateX(10rem);
   transition: all 2s ease-in-out;
   opacity: 1;
+}
+
+.blacked {
+  background-color: black;
+}
+
+.titlebox-wrap {
+  width: 100%;
+}
+
+.hamburger {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  color: white;
+  /* background-color: white; */
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger.menuActive span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.menuActive span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.menuActive span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  margin-top: 5px;
+}
+.hamburger span {
+  display: inline;
+  width: 100%;
+  background-color: white;
+  height: 2.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-rightblock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuActive {
 }

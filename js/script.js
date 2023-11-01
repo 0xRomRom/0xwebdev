@@ -45,6 +45,7 @@ toAbout.addEventListener("click", () => {
 
 const toSolutions = document.querySelector(".to-solutions-cta");
 const toSolutionsDiv = document.querySelector(".solutions");
+const toContactDiv = document.querySelector(".contact");
 
 toSolutions.addEventListener("click", () => {
   toSolutionsDiv.scrollIntoView({ behavior: "smooth" }); // Use "smooth" for smooth scrolling
@@ -141,4 +142,72 @@ submitButton.addEventListener("click", (e) => {
 const navBarLogo = document.querySelector(".navlogo");
 navBarLogo.addEventListener("click", () => {
   app.scrollIntoView({ behavior: "smooth" });
+});
+
+//Click navlinks
+const navspans = document.querySelectorAll(".navspan");
+
+const homespan = document.querySelector(".ct1");
+homespan.addEventListener("click", () => {
+  navspans.forEach((span) => {
+    span.classList.remove("activeSpan");
+  });
+  homespan.classList.add("activeSpan");
+  app.scrollIntoView({ behavior: "smooth" });
+});
+const aboutspan = document.querySelector(".ct2");
+aboutspan.addEventListener("click", () => {
+  navspans.forEach((span) => {
+    span.classList.remove("activeSpan");
+  });
+  aboutspan.classList.add("activeSpan");
+  toAboutDiv.scrollIntoView({ behavior: "smooth" });
+});
+const solutionsspan = document.querySelector(".ct3");
+solutionsspan.addEventListener("click", () => {
+  navspans.forEach((span) => {
+    span.classList.remove("activeSpan");
+  });
+  solutionsspan.classList.add("activeSpan");
+  toSolutionsDiv.scrollIntoView({ behavior: "smooth" });
+});
+const contactspan = document.querySelector(".ct4");
+contactspan.addEventListener("click", () => {
+  navspans.forEach((span) => {
+    span.classList.remove("activeSpan");
+  });
+  contactspan.classList.add("activeSpan");
+  toContactDiv.scrollIntoView({ behavior: "smooth" });
+});
+
+//Scroll toggle nav
+
+// Array of div elements
+const divs = Array.from(document.querySelectorAll(".container"));
+
+// Array of corresponding navigation spans
+const navSpans = Array.from(document.querySelectorAll(".navspan"));
+console.log(navSpans);
+
+window.onscroll = () => {
+  divs.forEach((div) => {
+    const top = window.scrollY;
+    const offset = div.offsetTop - 200;
+    const height = div.offsetHeight;
+    const ctIndex = div.getAttribute("id");
+
+    if (top >= offset && top < offset + height) {
+      navSpans.forEach((span) => {
+        span.classList.remove("activeSpan");
+        document.querySelector(`.${ctIndex}`).classList.add("activeSpan");
+      });
+    }
+  });
+};
+
+//Hamburger
+
+const hamburger = document.querySelector(".hamburger");
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("menuActive");
 });

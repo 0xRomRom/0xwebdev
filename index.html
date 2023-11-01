@@ -23,14 +23,19 @@
       <div class="submitoverlay hidden">
         <span>Thanks for your message.<br />You'll hear back shortly.</span>
       </div>
-      <header>
+      <header class="container" id="ct1">
         <nav>
           <img src="./assets/0xWebdev.png" alt="Logo" class="navlogo" />
-          <div>
-            <span class="navspan activeSpan">Home</span>
-            <span class="navspan">About</span>
-            <span class="navspan">Solutions</span>
-            <span class="navspan">Contact</span>
+          <div class="nav-rightblock">
+            <span class="navspan ct1 activeSpan">Home</span>
+            <span class="navspan ct2">About</span>
+            <span class="navspan ct3">Solutions</span>
+            <span class="navspan ct4">Contact</span>
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </nav>
         <div class="headerOverlay">
@@ -49,7 +54,7 @@
         </div>
         <!-- <canvas id="canvas"></canvas> -->
       </header>
-      <div class="about">
+      <div class="about container" id="ct2">
         <div class="blob"></div>
         <div class="wrap">
           <img
@@ -65,7 +70,7 @@
               Full-stack software developer from The Netherlands.<br />
               Proficient in modern client & serverside frameworks.<br /><br />
               I can help you develop a variety of frontend applications,<br />
-              lambda API's, automation scripts, webscrapers, desktop apps or
+              API's, automation scripts, webscrapers, desktop apps or
               <br />
               decentralized blockchain solutions.
             </p>
@@ -73,7 +78,7 @@
         </div>
         <button class="to-solutions-cta mainCta cls">Solutions</button>
       </div>
-      <div class="solutions">
+      <div class="solutions container" id="ct3">
         <div class="cloudwrapper">
           <h2 class="solutions-hero cls">Solutions</h2>
           <img
@@ -313,11 +318,13 @@
           </div>
         </div>
       </div>
-      <div class="contact">
-        <div class="contact-titlebox">
-          <h2 class="contact-hero cli">Contact</h2>
+      <div class="contact container" id="ct4">
+        <div class="titlebox-wrap">
+          <div class="contact-titlebox">
+            <h2 class="contact-hero cli">Contact</h2>
+          </div>
         </div>
-        <form class="contactModal" id="contact-form">
+        <form class="contactModal cls" id="contact-form">
           <div class="contact-topbar">
             <span class="newmsg-top">New Message</span>
           </div>
