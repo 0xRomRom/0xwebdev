@@ -40,7 +40,7 @@ const toAbout = document.querySelector(".to-about-cta");
 const toAboutDiv = document.querySelector(".about");
 
 toAbout.addEventListener("click", () => {
-  toAboutDiv.scrollIntoView({ behavior: "smooth" }); // Use "smooth" for smooth scrolling
+  toAboutDiv.scrollIntoView({ behavior: "smooth" });
 });
 
 const toSolutions = document.querySelector(".to-solutions-cta");
@@ -48,7 +48,7 @@ const toSolutionsDiv = document.querySelector(".solutions");
 const toContactDiv = document.querySelector(".contact");
 
 toSolutions.addEventListener("click", () => {
-  toSolutionsDiv.scrollIntoView({ behavior: "smooth" }); // Use "smooth" for smooth scrolling
+  toSolutionsDiv.scrollIntoView({ behavior: "smooth" });
 });
 
 //Intersection Observer
@@ -117,7 +117,7 @@ submitButton.addEventListener("click", (e) => {
     subject: subjectInput.value,
     message: messageInput.value,
   };
-  // emailjs.send("service_1i003xe", "template_dy5rw7e", params);
+  emailjs.send("service_1i003xe", "template_dy5rw7e", params);
   submitOverlay.classList.remove("hidden");
   setTimeout(() => {
     submitOverlay.classList.add("scaleUp");
@@ -195,7 +195,6 @@ contactspan.addEventListener("click", () => {
 const divs = Array.from(document.querySelectorAll(".container"));
 
 const navSpans = Array.from(document.querySelectorAll(".navspan"));
-console.log(navSpans);
 
 window.onscroll = () => {
   divs.forEach((div) => {
