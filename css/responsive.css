@@ -4,11 +4,19 @@
   }
 }
 @media (max-width: 750px) {
+  .hamburger {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
   nav {
     padding-right: 2rem;
   }
   .nav-rightblock {
-    /* display: none; */
+    flex-direction: column;
+    left: -100%;
+    display: none;
+    font-size: 20px;
   }
 
   .hamburger {

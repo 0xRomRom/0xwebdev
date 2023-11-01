@@ -67,6 +67,7 @@ nav {
   left: 2rem;
   height: 30px;
   cursor: pointer;
+  z-index: 1010;
 }
 
 header {
@@ -711,12 +712,11 @@ header {
 .menuActives {
   position: fixed;
   top: 0;
-  width: 100vw;
-  left: 0;
+  width: 110vw !important;
+  transform: translate(87.5%);
   height: 100vh;
   background-color: black;
   z-index: 1000;
-  flex-direction: column;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  display: flex !important;
 }

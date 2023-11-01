@@ -154,8 +154,8 @@ homespan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
-  navBar.classList.add("hidden");
-  hamburger.classList.remove("menuActive");
+  hamburger.classList.add("menuActive");
+  navBar.style.display = "none";
   navBar.classList.remove("menuActives");
   homespan.classList.add("activeSpan");
   app.scrollIntoView({ behavior: "smooth" });
@@ -165,8 +165,8 @@ aboutspan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
-  navBar.classList.add("hidden");
-  hamburger.classList.remove("menuActive");
+  hamburger.classList.add("menuActive");
+  navBar.style.display = "none";
   navBar.classList.remove("menuActives");
   aboutspan.classList.add("activeSpan");
   toAboutDiv.scrollIntoView({ behavior: "smooth" });
@@ -176,8 +176,8 @@ solutionsspan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
-  navBar.classList.add("hidden");
-  hamburger.classList.remove("menuActive");
+  hamburger.classList.add("menuActive");
+  navBar.style.display = "none";
   navBar.classList.remove("menuActives");
   solutionsspan.classList.add("activeSpan");
   toSolutionsDiv.scrollIntoView({ behavior: "smooth" });
@@ -187,8 +187,8 @@ contactspan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
-  navBar.classList.add("hidden");
-  hamburger.classList.remove("menuActive");
+  hamburger.classList.add("menuActive");
+  navBar.style.display = "none";
   navBar.classList.remove("menuActives");
   contactspan.classList.add("activeSpan");
   toContactDiv.scrollIntoView({ behavior: "smooth" });
@@ -218,19 +218,11 @@ window.onscroll = () => {
 };
 
 //Hamburger
-const navActive = false;
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("menuActive");
   navBar.classList.toggle("menuActives");
-  navBar.classList.toggle("hidden");
+
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
-  if (!navActive) {
-    navBar.style.display = "flex";
-    return;
-  } else {
-    navActive = !navActive;
-    navBar.style.display = "none";
-  }
 });
