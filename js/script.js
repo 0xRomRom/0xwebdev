@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 150);
   }
 
-  // updateText();
-  // setInterval(updateText, 2500);
+  updateText();
+  setInterval(updateText, 2500);
 });
 
 // CTAs
