@@ -122,7 +122,7 @@ submitButton.addEventListener("click", (e) => {
     submitOverlay.classList.add("scaleUp");
   }, 100);
   setTimeout(() => {
-    app.scrollIntoView({ behavior: "smooth" }); // Use "smooth" for smooth scrolling
+    app.scrollIntoView({ behavior: "smooth" });
   }, 3000);
   setTimeout(() => {
     submitOverlay.classList.add("scaleDown");
@@ -135,4 +135,10 @@ submitButton.addEventListener("click", (e) => {
     messageInput.value = "";
     subjectInput.selectedIndex = 0;
   }, 7000);
+});
+
+//Click navlogo
+const navBarLogo = document.querySelector(".navlogo");
+navBarLogo.addEventListener("click", () => {
+  app.scrollIntoView({ behavior: "smooth" });
 });
