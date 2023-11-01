@@ -116,6 +116,7 @@
   .contact-titlebox {
     width: 20rem;
     padding: 3rem 0rem;
+    left: -1rem;
   }
   .contact-hero {
     left: -4.2rem;
@@ -158,11 +159,11 @@
   }
   .contact {
     align-items: flex-start;
+    padding: 0rem 1rem;
   }
   .contactModal {
     position: relative;
-    width: 95%;
-    left: 1.8%;
+    width: 100%;
   }
 }
 
@@ -229,7 +230,6 @@
     z-index: 2;
   }
   .contact {
-    padding: 5rem 0rem;
     padding-top: 2rem;
     justify-content: flex-start;
     align-items: flex-start;
