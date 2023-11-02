@@ -194,15 +194,19 @@
     left: 16rem;
     top: -1.6rem;
   }
-  .header-div2 {
-    position: relative;
-  }
+
   .subHeader {
     top: -1.5rem;
     padding-left: 16rem;
   }
   .navlogo {
     height: 20px;
+  }
+}
+
+@media (max-width: 530px) {
+  .headerModal {
+    margin-left: 3rem;
   }
 }
 
@@ -268,24 +272,6 @@
   .solutions {
     padding-bottom: 10rem;
   }
-
-  .effectHeader {
-    top: 1.2rem;
-    left: 0.2rem;
-    position: relative;
-  }
-
-  .effectTxt {
-    left: 18.3rem;
-    top: -1.6rem;
-  }
-  .header-div2 {
-    position: relative;
-  }
-  .subHeader {
-    top: -1.5rem;
-    padding-left: 18.2rem;
-  }
 }
 
 @media (max-width: 440px) {
@@ -298,5 +284,8 @@
   }
   .contactModal {
     margin: 0 auto;
+  }
+  .headerModal {
+    margin-left: 4rem;
   }
 }
