@@ -201,6 +201,9 @@
     top: -1.5rem;
     padding-left: 16rem;
   }
+  .navlogo {
+    height: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -282,9 +285,6 @@
   .subHeader {
     top: -1.5rem;
     padding-left: 18.2rem;
-  }
-  .navlogo {
-    height: 20px;
   }
 }
 
