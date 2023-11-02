@@ -122,10 +122,10 @@
   .contact-titlebox {
     width: 20rem;
     padding: 3rem 0rem;
-    left: -1rem;
+    left: -4rem;
   }
   .contact-hero {
-    left: -4.2rem;
+    left: -5.8rem;
     position: relative;
     top: 0;
   }
@@ -275,13 +275,6 @@
 }
 
 @media (max-width: 440px) {
-  .contact-titlebox {
-    width: 17.5rem;
-    padding: 3rem 0rem;
-  }
-  .contact-hero {
-    font-size: 3rem;
-  }
   .contactModal {
     margin: 0 auto;
   }

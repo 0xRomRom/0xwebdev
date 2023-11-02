@@ -637,7 +637,7 @@ header {
 
 .contact-titlebox {
   position: relative;
-  padding: 5rem 0rem;
+  padding: 3rem 0rem;
   width: 30rem;
   background: linear-gradient(
     90deg,
@@ -651,13 +651,10 @@ header {
 }
 
 .contact-hero {
-  left: 1rem;
   display: block;
   color: rgb(161, 160, 160);
-  top: 2rem;
-  position: absolute;
-  font-size: 4rem;
-  transform: translateX(10rem);
+  font-size: 2rem;
+  transform: translateX(15rem);
 }
 
 .slideIn {
