@@ -105,13 +105,13 @@ header {
 
 .headerModal {
   position: relative;
-  height: 10rem;
+  /* height: 10rem; */
   color: white;
   padding: 0 3rem;
   border-radius: 0.8rem;
   width: 55rem;
   overflow: hidden;
-  margin-top: 11.2rem;
+  margin-top: 10.7rem;
 }
 
 .effectHeader {
@@ -134,7 +134,7 @@ header {
 .effectTxt {
   font-size: 5rem;
   letter-spacing: 2px;
-  display: inline;
+  display: block;
   position: absolute;
   top: -1rem;
   opacity: 0;
@@ -154,6 +154,21 @@ header {
   transform: translateY(1rem);
   opacity: 1;
 }
+
+.header-div1 {
+  position: relative;
+  /* width: 100%; */
+  height: 7rem;
+  /* background-color: red; */
+}
+
+.header-div2 {
+  position: relative;
+  /* width: 100%; */
+  height: 7rem;
+  /* background-color: red; */
+}
+
 .subHeader {
   font-size: 1.8rem;
   letter-spacing: 2px;

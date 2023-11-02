@@ -53,7 +53,7 @@
     font-size: 4rem;
   }
   .headerModal {
-    margin-top: 11.9rem;
+    margin-top: 10rem;
   }
   .header-row {
     padding-left: 6rem;
@@ -70,6 +70,15 @@
     align-items: flex-end;
     justify-content: flex-end;
     padding-left: 1rem;
+  }
+  .header-div1 {
+    position: relative;
+    height: 5.5rem;
+  }
+
+  .header-div2 {
+    position: relative;
+    height: 5.5rem;
   }
 }
 
@@ -98,7 +107,7 @@
     padding: 0;
   }
   .headerModal {
-    margin-top: 12.4rem;
+    margin-top: 9rem;
   }
   .header-row {
     padding-left: 11.2rem;
@@ -106,7 +115,6 @@
   .subHeader {
     padding-left: 11.2rem;
     font-size: 20px;
-    margin-top: 0.5rem;
   }
   .header-row {
     gap: 0.5rem;
@@ -124,26 +132,34 @@
   .slideIn {
     transform: translateX(6rem);
   }
+  .header-div1 {
+    position: relative;
+    /* width: 100%; */
+    height: 5rem;
+    /* background-color: red; */
+  }
+
+  .header-div2 {
+    position: relative;
+    /* width: 100%; */
+    height: 5rem;
+    /* background-color: red; */
+  }
 }
 
 @media (max-width: 580px) {
   .header-row {
     flex-direction: column;
-    padding-left: 17rem;
+    text-align: center;
+    padding: 0;
   }
   .subHeader {
     padding-left: 17rem;
   }
-  .effectTxt {
-    top: 3rem;
-  }
 
-  .header-div2 {
-    top: -3rem;
-    height: 62.5px;
-  }
   .headerModal {
     margin-top: 5rem;
+    flex-direction: column;
   }
   header {
     width: 150vw;
@@ -164,17 +180,30 @@
     position: relative;
     width: 100%;
   }
+  .header-div1 {
+    position: relative;
+  }
+
+  .effectHeader {
+    top: 1.2rem;
+    left: -2.2rem;
+    position: relative;
+  }
+
+  .effectTxt {
+    left: 16rem;
+    top: -1.6rem;
+  }
+  .header-div2 {
+    position: relative;
+  }
+  .subHeader {
+    top: -1.5rem;
+    padding-left: 16rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .header-row {
-    flex-direction: column;
-    padding-left: 19rem;
-  }
-  .subHeader {
-    padding-left: 19rem;
-  }
-
   .codegraphic {
     width: 20rem;
   }
@@ -236,10 +265,26 @@
   .solutions {
     padding-bottom: 10rem;
   }
-  .about {
-    /* padding-bottom: 20rem; */
+
+  .effectHeader {
+    top: 1.2rem;
+    left: 0.2rem;
+    position: relative;
+  }
+
+  .effectTxt {
+    left: 18.5rem;
+    top: -1.6rem;
+  }
+  .header-div2 {
+    position: relative;
+  }
+  .subHeader {
+    top: -1.5rem;
+    padding-left: 18.5rem;
   }
 }
+
 @media (max-width: 440px) {
   .contact-titlebox {
     width: 17.5rem;
@@ -250,35 +295,5 @@
   }
   .contactModal {
     margin: 0 auto;
-  }
-}
-
-@media (max-width: 420px) {
-  .header-row {
-    flex-direction: column;
-    padding-left: 18rem;
-  }
-  .subHeader {
-    padding-left: 18rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .header-row {
-    flex-direction: column;
-    padding-left: 19rem;
-  }
-  .subHeader {
-    padding-left: 19rem;
-  }
-}
-
-@media (max-width: 380px) {
-  .header-row {
-    flex-direction: column;
-    padding-left: 18rem;
-  }
-  .subHeader {
-    padding-left: 18rem;
   }
 }

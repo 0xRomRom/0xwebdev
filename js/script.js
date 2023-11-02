@@ -50,10 +50,7 @@ toSolutions.addEventListener("click", () => {
   toSolutionsDiv.scrollIntoView({ behavior: "smooth" });
 });
 
-//Intersection Observer
-
 //Submit form
-
 const submitButton = document.querySelector(".submitform");
 const emailInput = document.querySelector(".emailInput");
 const subjectInput = document.querySelector(".subject-select");
@@ -120,7 +117,7 @@ homespan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
-  hamburger.classList.add("menuActive");
+  hamburger.classList.remove("menuActive");
   navBar.classList.remove("menuActives");
   homespan.classList.add("activeSpan");
   app.scrollIntoView({ behavior: "smooth" });
@@ -130,7 +127,7 @@ aboutspan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
-  hamburger.classList.add("menuActive");
+  hamburger.classList.remove("menuActive");
   navBar.classList.remove("menuActives");
   aboutspan.classList.add("activeSpan");
   toAboutDiv.scrollIntoView({ behavior: "smooth" });
@@ -140,7 +137,7 @@ solutionsspan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
-  hamburger.classList.add("menuActive");
+  hamburger.classList.remove("menuActive");
   navBar.classList.remove("menuActives");
   solutionsspan.classList.add("activeSpan");
   toSolutionsDiv.scrollIntoView({ behavior: "smooth" });
@@ -150,7 +147,7 @@ contactspan.addEventListener("click", () => {
   navspans.forEach((span) => {
     span.classList.remove("activeSpan");
   });
-  hamburger.classList.add("menuActive");
+  hamburger.classList.remove("menuActive");
   navBar.classList.remove("menuActives");
   contactspan.classList.add("activeSpan");
   toContactDiv.scrollIntoView({ behavior: "smooth" });
@@ -187,8 +184,8 @@ hamburger.addEventListener("click", () => {
   });
 });
 
+//Intersection Observer
 const elementsToAnimate = document.querySelectorAll(".cls");
-
 const options = {
   root: null,
   rootMargin: "0px",
